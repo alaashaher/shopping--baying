@@ -5,6 +5,7 @@
 
 .header {
     border-bottom: 2px solid #eee;
+    height: 78px;
 }
 
 .nav-link {
@@ -20,6 +21,142 @@
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(20, 20, 20, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+/* side nav */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: rgb(51, 11, 76);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar {
+        z-index: 1;
+    }
+
+    .navbar-collapse {
+        background-color: #615f5f;
+    }
+
+    .nav-link {
+        padding-left: 14px;
+        color: white;
+    }
+}
+
+/* contant */
+.contant {
+    padding: 0px 1.3em;
+}
+
+/* payment method */
+.payment-method {
+    padding-top: 20px;
+}
+
+.payment-method .paying-nav {
+    color: #615f5f;
+}
+
+.payment-method .active {
+    font-weight: 600;
+}
+
+.paypal {
+    margin-top: 15px;
+}
+
+.paypal img:hover {
+    cursor: pointer;
+}
+
+.or {
+    margin-top: 15px;
+}
+
+.conatact-info {
+    padding: 12px;
+}
+
+.shipping {
+    margin-top: 32px;
+}
+
+input {
+    margin-top: 14px;
+}
+
+.name-div {
+    padding: 14px;
+}
+
+.col-12 {
+    padding: 0px;
+}
+
+.trems {
+    color: #615f5f;
+}
+
+.form-footer {
+    margin-top: 35px;
+}
+
+.continue {
+    float: right;
+    padding: 15px;
+    background-color: #2196F3;
+    color: white;
+}
+
+.state {
+    width: 100%;
+    margin-top: 14px;
+    height: 74%;
+    background-color: #fff;
+    color: #495057;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
 }
 
 @media (min-width: 576px) {}

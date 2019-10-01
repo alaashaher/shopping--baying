@@ -15,13 +15,13 @@
     <!-- header -->
     <div class="container-fluid header">
         <nav class="navbar navbar-expand-lg row">
-            <a class="navbar-brand col-8" href="#"><img src="./images/logo.png" alt=""></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02"
-                aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand  col-xl-8 col-8 col-lg-5" href="#"><img src="./images/logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+                onclick="openNav()">
                 <span class="navbar-toggler-icon"></span>
             </button>
 
-            <div class="collapse navbar-collapse col-4" id="navbarTogglerDemo02">
+            <div class="collapse navbar-collapse col-4 col-md-12" id="navbarTogglerDemo02">
                 <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ">
                     <li class="nav-item">
                         <a class="nav-link" href="#">home</a>
@@ -44,16 +44,124 @@
 
             </div>
         </nav>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">home</a>
+            <a href="#">shopping</a>
+            <a href="#">blilling</a>
+            <a href="#">receipt</a>
+            <a class="#" href="#"><img src="https://img.icons8.com/material/24/000000/shopping-cart-loaded--v1.png"
+                    alt="shopping cart">Shopping Cart</a>
+        </div>
     </div>
 
     <!-- contant -->
     <div class="container-fluid">
         <div class="contant row">
-            <div class="col-lg-5 col-xs-12">
-                <a href="" class="paying-nav"></a>
+            <!-- payment method -->
+            <div class="col-lg-7 col-xs-12 payment-method">
+                <a href="" class="paying-nav active">Customer information</a>
+                >
+                <a href="" class="paying-nav">Payment method</a>
+
+                <div class="paypal"><img src="./images/paypal.png" alt="paypal" width="120"></div>
+                <div class="or row">
+                    <div class="col-5">
+                        <hr>
+                    </div>
+                    <div class="col-2 text-center" style="margin-top: 4px;">OR</div>
+                    <div class="col-5">
+                        <hr>
+                    </div>
+                </div>
+                <div class="conatact-info">
+                    <form class="row" role="form">
+                        <h3>Contact information</h3>
+                        <div class="col-12">
+                            <input type="email" id="email" class="form-control" placeholder="Email Address">
+                        </div>
+                        <div class="custom-control custom-checkbox mr-sm-2 col-12"
+                            style="padding: 22px 10px 10px 26px;">
+                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
+                            <label class="custom-control-label" for="customControlAutosizing">Keep me up to date on news
+                                and exclusive offers</label>
+                        </div>
+                        <div class="col-12">
+                            <h3 class="shipping">Shipping Address</h3>
+                            <div class="row">
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="First Name" id="first">
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" placeholder="Last Name" id="last">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="address" placeholder="Address">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control" placeholder="Apt, suite, etc. (optional)">
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control" id="city" placeholder="city">
+                        </div>
+                        <div class="col-12">
+                            <div class="row">
+                                <div class="col-4">
+                                    <select class="state">
+                                        <option value="">United States</option>
+                                        <option value="volvo">Volvo</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <select  class="state">
+                                        <option value="">Select State</option>
+                                        <option value="volvo">Volvo</option>
+                                        <option value="saab">Saab</option>
+                                        <option value="mercedes">Mercedes</option>
+                                        <option value="audi">Audi</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <input type="number" class="form-control" placeholder="Zip" min="0" max="99999"
+                                    >
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <input type="text" class="form-control" required placeholder="Phone Number">
+                        </div>
+                        <div class="custom-control custom-checkbox mr-sm-2 col-12"
+                            style="padding: 22px 10px 10px 26px;">
+                            <input type="checkbox" class="custom-control-input" id="customControlAutosizing1">
+                            <label class="custom-control-label" for="customControlAutosizing1">I agree to the <a
+                                    href="#" class="trems">Trems of Use and Conditions of Sala</a> - <a href="#"
+                                    class="trems">Privacy Policy</a></label>
+                        </div>
+                        <div class="col-12 form-footer">
+                            <div class="row">
+                                <div class="col-6" style="    line-height:3;">
+                                    <a href="#" class="return" style="padding: 22px 10px 10px 26px;"> Rrturn
+                                        to Package Selection</a>
+                                </div>
+                                <div class="col-6">
+                                    <button class="continue btn" type="submit" onclick="main()">Continue to payment method</button>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
             </div>
-            <div class="col-lg-7 col-xs-12"></div>
         </div>
+        <div class="col-lg-5 col-xs-12">
+
+        </div>
+    </div>
     </div>
 
     <!-- script -->
@@ -66,6 +174,10 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="./javascript/index.js"></script>
 </body>
 
 </html>
