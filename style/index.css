@@ -1,9 +1,10 @@
 body {
     overflow-x: hidden;
 }
+
 /* header */
 .container-fluid {
-    padding: 0px 12%;
+    padding: 0px 7%;
 }
 
 .header {
@@ -34,7 +35,7 @@ body {
     z-index: 1;
     top: 0;
     right: 0;
-    background-color: rgb(51, 11, 76);
+    background-color: #222222;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -151,6 +152,27 @@ input {
     color: white;
 }
 
+.continue:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: rgb(27, 128, 211);
+}
+
+@media (max-width:991px) {
+    .continue {
+        width: 100%;
+    }
+
+    .return {
+        width: 100%;
+        text-align: center
+    }
+
+    .form-footer {
+        text-align: center
+    }
+}
+
 .state {
     width: 100%;
     margin-top: 14px;
@@ -162,13 +184,51 @@ input {
     border-radius: .25rem;
 }
 
-@media (min-width: 576px) {}
+/* cart */
+.cart {
+    background-color: #fafafa;
+    padding: 10px 0px 0px 30px;
+    margin-top: 12px;
+}
 
-/* Medium devices (tablets, 768px and up) */
-@media (min-width: 768px) {}
+.image-product {
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    background-color: #fff;
+}
 
-/* Large devices (desktops, 992px and up) */
-@media (min-width: 992px) {}
+.image-product img {
+    width: 100%;
+    height: 100%;
+}
 
-/* Extra large devices (large desktops, 1200px and up) */
-@media (min-width: 1200px) {}
+.product-name {
+    margin-top: 21px;
+    padding: 0px 9px;
+    font-size: 12px;
+}
+
+strong {
+    font-size: 13px;
+    margin-top: 22px;
+}
+
+
+/* footer */
+.footer {
+    background-color: #222222;
+    height: auto;
+    padding: 20px;
+    color: #fff;
+    margin-top: 20px;
+    line-height: 52px
+}
+
+.footer .links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
